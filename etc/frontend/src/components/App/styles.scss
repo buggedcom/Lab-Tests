@@ -1,0 +1,23 @@
+@import './reset.scss';
+@import './responsive.scss';
+@import './typography.scss';
+@import './form-tables.scss';
+
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow:hidden;
+  background: rgb(231,241,255);
+  background: -moz-linear-gradient(top, rgba(231,241,255,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(231,241,255,1) 0%,rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(231,241,255,1) 0%,rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7f1ff', endColorstr='#ffffff',GradientType=0 );
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+}

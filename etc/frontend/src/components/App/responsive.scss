@@ -1,0 +1,7 @@
+$breakpoints-list: 320 375 425 500 600 650 768 950 1024;
+@each $breakpoint in $breakpoints-list {
+  html.lte-#{$breakpoint} .hide-on-lte-#{$breakpoint},
+  html.gt-#{$breakpoint} .hide-on-gt-#{$breakpoint} {
+    display: none;
+  }
+}

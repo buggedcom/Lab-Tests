@@ -1,0 +1,22 @@
+button.ButtonTrash {
+    &:not(.ButtonTrash--has-label) {
+        border-color: transparent;
+        background-color: transparent;
+        padding-right: 6px;
+
+        svg{
+            margin-right:0px;
+        }
+
+        &:hover {
+            border-color: rgb(251, 166, 166);
+            background-color: rgb(251, 209, 209);
+
+            svg{
+                path{
+                    fill: rgb(160, 0, 0) !important;
+                }
+            }
+        }
+    }
+}

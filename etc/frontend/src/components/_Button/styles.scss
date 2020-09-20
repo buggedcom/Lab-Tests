@@ -1,0 +1,176 @@
+@mixin reset-button {
+    overflow : visible;
+    margin : 0;
+    padding : 0;
+    border : 0;
+    background : transparent;
+    font : inherit;
+    line-height : normal;
+    cursor : pointer;
+    -moz-user-select : text;
+
+    &:-moz-focus-inner {
+        padding : 0;
+        border : 0;
+    }
+}
+
+button._Button {
+    @include reset-button;
+    display: block;
+    text-decoration: none;
+    padding: 3px 9px 3px 7px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    transition: all .15s ease;
+
+    svg{
+        margin-top:-3px;
+        margin-right:5px;
+    }
+    
+    span {
+        font-size: 1em;
+    }
+
+    html.browser-firefox & {
+        svg{
+            position: relative;
+            margin-top: -1px;
+        }
+
+        span {
+            vertical-align: middle;
+            top: 1px;
+            position: relative;
+        }
+    }
+
+    html.linux.browser-chrome & {
+        svg{
+            margin-top: 0px;
+        }
+
+        span {
+            position: relative;
+            top:2px;
+        }
+    }
+
+    &--size-small {
+        font-size: 0.8rem;
+    }
+
+    &--size-medium {
+        // medium is the default size. this is just here because of the comment
+    }
+
+    &--size-large {
+        padding: 5px 15px 6px 10px;
+        border-radius: 30px;
+        font-size: 1.3em;
+
+        svg{
+            margin-top:-4px;
+        }
+    }
+
+    &--theme-primary {
+        color: rgb(49, 67, 108);
+        border-color: rgb(214, 149, 0);
+
+        background: rgb(255, 182, 0);
+        background: -moz-linear-gradient(top, rgb(255, 213, 108) 0%, rgb(255, 182, 0) 100%);
+        background: -webkit-linear-gradient(top, rgb(255, 213, 108) 0%, rgb(255, 182, 0) 100%);
+        background: linear-gradient(to bottom, rgb(255, 213, 108) 0%, rgb(255, 182, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd56c', endColorstr='#ffb600',GradientType=0 );
+
+        svg{
+            path{
+                fill: rgb(49, 67, 108) !important;
+            }
+        }
+
+        &--errored{
+            color: rgba(49, 67, 108, 0.2);
+            border-color: rgba(214, 149, 0, 0.2);
+
+            background: rgba(255, 182, 0, 0.2);
+            background: -moz-linear-gradient(top, rgba(255, 213, 108, 0.2) 0%, rgba(255, 182, 0, 0.2) 100%);
+            background: -webkit-linear-gradient(top, rgba(255, 213, 108, 0.2) 0%, rgba(255, 182, 0, 0.2) 100%);
+            background: linear-gradient(to bottom, rgba(255, 213, 108, 0.2) 0%, rgba(255, 182, 0, 0.2) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd56c33', endColorstr='#ffb60033',GradientType=0 );
+
+            svg{
+                path{
+                    fill: rgba(49, 67, 108, 0.2) !important;
+                }
+            }
+        }
+
+        &--success{
+            color: rgb(34, 158, 24);
+            border-color: rgb(34, 158, 24);
+            background: rgb(225, 255, 223);
+            svg{
+                path{
+                    fill: rgb(34, 158, 24) !important
+                }
+            }
+        }
+
+    }
+
+    &--theme-secondary{
+        color: rgb(50, 81, 123);
+        border-color: rgb(153, 175, 202);
+        background: rgb(235, 243, 254);
+
+        svg{
+            path{
+                fill: rgb(50, 81, 123) !important;
+            }
+        }
+
+        &--errored{
+            color: rgba(50, 81, 123, 0.2);
+            border-color: rgba(153, 175, 202, 0.2);
+            //background: rgba(235, 243, 254, 0.2);
+            background:transparent;
+
+            svg{
+                path{
+                    fill: rgba(50, 81, 123, 0.2) !important;
+                }
+            }
+        }
+
+    }
+
+    &--theme-transparent{
+        color: rgb(50, 81, 123);
+        border-color: rgb(153, 175, 202);
+        //background: rgb(235, 243, 254);
+        background:transparent;
+
+        svg{
+            path{
+                fill: rgb(50, 81, 123) !important;
+            }
+        }
+
+        &--errored{
+            color: rgba(50, 81, 123, 0.2);
+            border-color: rgba(153, 175, 202, 0.2);
+            //background: rgba(235, 243, 254, 0.2);
+            background:transparent;
+
+            svg{
+                path{
+                    fill: rgba(50, 81, 123, 0.2) !important;
+                }
+            }
+        }
+
+    }
+}

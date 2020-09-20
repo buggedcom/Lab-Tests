@@ -1,0 +1,67 @@
+@import "../../scss/mixins";
+
+nav {
+    .upper {
+        background: rgb(172, 188, 212);
+        height:8px;
+        border-bottom:1px solid rgb(39, 49, 78);
+    }
+    .middle {
+        padding:15px 10px 10px 10px;
+        background: rgb(46,63,104);
+        background: -moz-linear-gradient(top, rgba(46,63,104,1) 0%, rgba(64,85,135,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(46,63,104,1) 0%,rgba(64,85,135,1) 100%);
+        background: linear-gradient(to bottom, rgba(46,63,104,1) 0%,rgba(64,85,135,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e3f68', endColorstr='#405587',GradientType=0 );
+
+        img{
+            height: 27px;
+            margin-bottom: 2px;
+        }
+
+        .labs{
+            position: absolute;
+            top: 25px;
+            right: 67px;
+            svg{
+                font-size: 1.2em;
+                margin-right:5px;
+                margin-top:-9px;
+               path {
+                   fill: rgb(253, 181, 43) !important;
+               }
+            }
+            span{
+                font-size: 1.3em;
+                @include font();
+                font-weight: normal;
+                color: rgb(253, 181, 43);
+            }
+        }
+    }
+    .lower{
+        .line{
+            background: rgb(253, 181, 43);
+            height:5px;
+            width: calc(100% - 100px);
+            margin-top:-1px;
+            border-top:1px solid rgb(27, 20, 100);
+            border-bottom:1px solid rgb(27, 20, 100);
+        }
+
+        img{
+            position: absolute;
+            right:0px;
+            top:24px;
+            height:70px;
+
+            html.browser-firefox & {
+                top:25px;
+            }
+
+            html.linux.browser-chrome & {
+                top:26px;
+            }
+        }
+    }
+}

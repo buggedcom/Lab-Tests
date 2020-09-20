@@ -1,0 +1,64 @@
+{
+  "name": "terveystalo-laboratory-tests",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "details-polyfill": "^1.1.0",
+    "detect-browser": "^4.1.0",
+    "formik": "^1.5.1",
+    "icomoon-react": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-is": "^16.8.4",
+    "react-modal": "^3.8.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "yup": "^0.26.10"
+  },
+  "proxy": "http://192.168.33.10:8080",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build && rm -rf ../../public/* && mv ./build/* ../../public/ && npm run test-regression-rebuild",
+    "test": "react-app-rewired test",
+    "test-components": "NODE_ENV=testing ./bin/test-components",
+    "test-regression": "NODE_ENV=testing ./bin/test-regressions",
+    "test-regression-rebuild": "NODE_ENV=testing ./bin/test-regressions --rebuild-html --rebuild-screenshots",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "glob": "^7.1.3",
+    "gm": "^1.23.1",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^14.0.0",
+    "mocha": "^6.0.2",
+    "puppeteer": "^1.13.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "react-app-rewired": "^2.1.0",
+    "react-hot-loader": "^4.8.0",
+    "shelljs": "^0.8.3",
+    "str-trim": "^1.2.0"
+  }
+}

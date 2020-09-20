@@ -1,0 +1,22 @@
+.listable-item{
+    .abbrv{
+        display: inline-block;
+    }
+
+    .abbrv{
+        position: relative;
+        top:2px;
+    }
+
+    .abbrv {
+        opacity: 0.5;
+        margin-left:5px;
+        display: inline-block;
+    }
+
+    html.linux.browser-chrome & {
+        .abbrv{
+            top: 3px;
+        }
+    }
+}

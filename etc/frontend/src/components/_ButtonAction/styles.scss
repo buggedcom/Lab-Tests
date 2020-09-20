@@ -1,0 +1,38 @@
+button._ButtonAction {
+
+    &--hoverType-positive {
+        &:hover {
+            color: rgb(9, 70, 4);
+            border-color: rgb(131, 177, 128);
+            background: rgb(182,224,38);
+            background: -moz-linear-gradient(top, rgba(182,224,38,1) 0%, rgba(131,170,32,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(182,224,38,1) 0%,rgba(131,170,32,1) 100%);
+            background: linear-gradient(to bottom, rgba(182,224,38,1) 0%,rgba(131,170,32,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6e026', endColorstr='#83aa20',GradientType=0 );
+
+            svg {
+                path {
+                    fill: rgb(9, 70, 4) !important
+                }
+            }
+        }
+    }
+
+    &--hoverType-negative {
+        &:hover {
+            background: rgb(169,3,41);
+            background: -moz-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
+            background: linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+            border-color: rgb(138, 0, 0);
+            color: rgb(255, 255, 255);
+
+            svg {
+                path {
+                    fill: rgb(255, 255, 255) !important;
+                }
+            }
+        }
+    }
+}

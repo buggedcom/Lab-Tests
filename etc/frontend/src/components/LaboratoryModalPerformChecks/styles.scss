@@ -1,0 +1,22 @@
+.lab-test-perform-check{
+    tr.test {
+        select {
+            // TODO - maybe
+        }
+    }
+
+    tr.value {
+        input {
+            width: 100px;
+        }
+    }
+}
+
+.ReactModal__Overlay._ModalSimple__Overlay--state-success.lab-test-perform-check  {
+
+    background: -moz-radial-gradient(center, ellipse cover, rgba(10, 40, 0, 0.4) 0%, rgba(4, 58, 0, 0.9) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(10, 40, 0, 0.4) 0%,rgba(4, 58, 0, 0.9) 100%);
+    background: radial-gradient(ellipse at center, rgba(10, 40, 0, 0.4) 0%, rgba(4, 58, 0, 0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a280066', endColorstr='#043a00e6',GradientType=1 );
+
+}

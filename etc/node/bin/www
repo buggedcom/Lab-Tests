@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+require('@babel/register')({
+    presets: [ '@babel/preset-env' ],
+    plugins: [ '@babel/plugin-proposal-class-properties' ]
+});
+
+require('../server');

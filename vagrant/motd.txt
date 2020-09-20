@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------------------------
+| TERVEYSTALO LABORATORY TESTS                                                                  |
+|                                                                                               |
+|-----------------------------------------------------------------------------------------------|
+| AUTHOR                                                                                        |
+|-----------------------------------------------------------------------------------------------|
+| Oliver Lillie <buggedcom@gmail.com>                                                           |
+| CV       - https://www.dropbox.com/s/e60phexa2mgazty/oliver-lillie-cv-and-projects.pdf?dl=0   |
+| LinkedIn - https://linkedin.com/in/oliverlillie/                                              |
+| This package - https://www.dropbox.com/sh/9jucgxll841olwm/AADQf9qkJQxNVouvIHHxmJrxa?dl=0      |
+|                                                                                               |
+|-----------------------------------------------------------------------------------------------|
+| TECHNOLOGIES                                                                                  |
+|-----------------------------------------------------------------------------------------------|
+| Frontend - React                                                                              |
+| Backend  - NodeJS                                                                             |
+|                                                                                               |
+|-----------------------------------------------------------------------------------------------|
+| QUICKSTART                                                                                    |
+|-----------------------------------------------------------------------------------------------|
+| cd ~/path/to/directory/                                                                       |
+| vagrant up server                                                                             |
+| vagrant ssh server                                                                            |
+|                                                                                               |
+| After vagrant setup has completed you should see a box wil final instructions.                |
+|                                                                                               |
+| However for completeness both the React app will have already been built for production and   |
+| the node app server will have already been started on boot of the machine.                    |
+|                                                                                               |
+| Go to http://192.168.33.10 to start.                                                          |
+|                                                                                               |
+|-----------------------------------------------------------------------------------------------|
+| TESTS                                                                                         |
+|-----------------------------------------------------------------------------------------------|
+| There are four test suites, however considering this is just a test project they are not all  |
+| complete to a polished level.                                                                 |
+|                                                                                               |
+| There are two test suits for the frontend.                                                    |
+| * React component tests                                                                       |
+| * UI Regression tests                                                                         |
+|                                                                                               |
+| To run:                                                                                       |
+| vagrant ssh server                                                                            |
+| cd /vagrant/www/etc/frontend                                                                  |
+| npm run test-components                                                                       |
+| npm run test-regression                                                                       |
+|                                                                                               |
+| And there two test suites for the node backend, but they are run through the same command.    |
+| * API tests                                                                                   |
+| * Model tests                                                                                 |
+|                                                                                               |
+| To run:                                                                                       |
+| vagrant ssh server                                                                            |
+| cd /vagrant/www/etc/node                                                                      |
+| npm run test                                                                                  |
+--------------------------------------------------------------------------------------------------
+
+

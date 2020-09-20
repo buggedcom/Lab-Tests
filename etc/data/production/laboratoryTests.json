@@ -1,0 +1,85 @@
+{
+  "table": [
+    {
+      "id": 1,
+      "dateCreated": 1551916493218,
+      "dateUpdated": 1552668084117,
+      "name": "Hemoglobin",
+      "abbrv": "Hb",
+      "unit": "g/l",
+      "goodRangeMin": -999,
+      "goodRangeMax": 5
+    },
+    {
+      "id": 2,
+      "dateCreated": 1552330613778,
+      "dateUpdated": 1552330613778,
+      "name": "Antinuclear Antibody",
+      "abbrv": "ANA",
+      "unit": "mmol/l",
+      "goodRangeMin": null,
+      "goodRangeMax": 320
+    },
+    {
+      "id": 3,
+      "dateCreated": 1552330613871,
+      "dateUpdated": 1552879752681,
+      "name": "Glucose Level1",
+      "abbrv": "BGL",
+      "unit": "mmol/l",
+      "goodRangeMin": 70,
+      "goodRangeMax": 99
+    },
+    {
+      "id": 6,
+      "dateCreated": 1552330614073,
+      "dateUpdated": 1552687306795,
+      "name": "Oxygen Saturation Arterial",
+      "abbrv": "SPO2",
+      "unit": "%",
+      "goodRangeMin": 94,
+      "goodRangeMax": 100
+    },
+    {
+      "id": 7,
+      "dateCreated": 1552330614127,
+      "dateUpdated": 1552879746168,
+      "name": "Oxygen Saturation Venous",
+      "abbrv": "SvO2",
+      "unit": "%",
+      "goodRangeMin": 75,
+      "goodRangeMax": 75
+    },
+    {
+      "id": 12,
+      "dateCreated": 1552600476234,
+      "dateUpdated": 1552600476234,
+      "name": "Ionized Calcium",
+      "abbrv": "Ca",
+      "unit": "mmol/l",
+      "goodRangeMin": 1.03,
+      "goodRangeMax": 1.23
+    },
+    {
+      "id": 15,
+      "dateCreated": 1552600476387,
+      "dateUpdated": 1552600476387,
+      "name": "CK-MB",
+      "abbrv": null,
+      "unit": "ng/mL",
+      "goodRangeMin": 0,
+      "goodRangeMax": 5
+    },
+    {
+      "id": 16,
+      "dateCreated": 1552646225883,
+      "dateUpdated": 1552646225883,
+      "name": "Really really long test name that should force some kind of scrolling",
+      "abbrv": "abcde",
+      "unit": "cups",
+      "goodRangeMin": 1,
+      "goodRangeMax": 5
+    }
+  ],
+  "autoIncrement": 17
+}

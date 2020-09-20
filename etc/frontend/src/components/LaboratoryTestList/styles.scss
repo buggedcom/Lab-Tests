@@ -1,0 +1,197 @@
+nav.filters{
+    display: block;
+    float:left;
+    width: 200px;
+    height: calc(100% - 69px);
+    background: rgb(211, 224, 239);
+    border-right:1px solid rgb(195, 209, 226);
+
+    .container{
+        border-top:1px solid rgb(195, 209, 226);
+        margin-top:52px;
+    }
+
+    li.group {
+        border-bottom:1px solid rgb(199, 212, 226);
+
+        label,
+        ul{
+            padding:10px;
+        }
+
+        label {
+            display: block;
+            background-color: rgb(203, 216, 230);
+        }
+
+        li {
+            cursor: pointer;
+            font-weight: 200;
+            &.selected{
+                font-weight: 400;
+            }
+        }
+    }
+
+    & + section {
+        display: block;
+        float:left;
+        width: calc(100% - 200px);
+        height: calc(100% - 69px);
+
+        header,
+        details{
+            padding:10px;
+        }
+
+        header{
+            position: relative;
+            border-bottom: 1px solid rgb(195, 209, 226);
+
+            h1{
+                color: rgb(49, 67, 108);
+
+                html.linux.browser-chrome & {
+                    span {
+                        position: relative;
+                        top:3px;
+                    }
+                }
+            }
+
+            .actions {
+                position: absolute;
+                right:10px;
+                top:0px;
+                margin-top:10px;
+                margin-left:10px;
+                margin-bottom:11px;
+                z-index: 1;
+                
+                ._Button {
+                    float: right;
+                    margin-left:8px;
+                }
+
+                html.linux.browser-chrome & {
+                    margin-top:13px;
+                }
+            }
+        }
+
+        details {
+            p {
+               margin-top:5px;
+            }
+
+            &[open] {
+                border-bottom:1px solid rgb(195, 209, 226);
+
+                + main {
+                    padding-top:10px;
+                }
+            }
+        }
+
+        summary {
+            display: inline;
+            cursor: pointer;
+            font-weight: 200;
+            font-size: 0.9rem;
+
+            svg {
+                font-size: 0.9em;
+                margin-right:3px;
+                margin-top:-2px;
+                path {
+                    fill: rgba(49, 67, 108, 0.6) !important;
+                }
+            }
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+        }
+
+        main {
+            padding-top:0px;
+        }
+
+        .scroller{
+            overflow:auto;
+            height:calc(100% - 53px);
+        }
+
+    }
+}
+
+html.lte-768 {
+    nav.filters {
+        & + section {
+            header {
+                .actions {
+                    button {
+                        position: fixed;
+                        bottom:20px;
+                        right:20px;
+                        border-radius: 30px;
+                        padding:10px;
+                        margin-bottom:0px;
+
+                        svg {
+                            font-size: 2rem;
+                            margin-right:0px;
+                            margin-top:0px;
+                        }
+
+                        span {
+                            display: none;
+                        }
+
+                        &._Button--theme-secondary {
+                            bottom:85px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.lte-600 {
+    nav.filters{
+        z-index: 1;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in;
+
+        & + section {
+            width: 100%;
+
+            header {
+                h1 {
+                    cursor:pointer;
+                    margin-top:-1px;
+                    padding-left:15px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: -15px;
+                        top: 17px;
+                        width: 30px;
+                        height: 3px;
+                        background: rgb(49, 67, 108);
+                        box-shadow: 0 8px 0 0 rgb(49, 67, 108), 0 16px 0 0 rgb(49, 67, 108);
+                    }
+                }
+            }
+        }
+
+        &.open {
+            transform: translateX(0px);
+            box-shadow: 0px 5px 9px 3px rgba(0, 0, 0, 0.12);
+            border-right-color: rgb(156, 174, 195);
+        }
+    }
+}

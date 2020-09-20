@@ -1,0 +1,58 @@
+.listable-item{
+    position: relative;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    .name,
+    button{
+        display: inline-block;
+    }
+
+    .name{
+        position: relative;
+        top:2px;
+    }
+
+    .name {
+        white-space: nowrap;
+        overflow: hidden;
+        height:20px;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: calc(100% - 135px);
+
+    }
+
+    html.mac-os.browser-chrome & {
+        .name {
+            vertical-align: sub;
+        }
+    }
+
+    html.browser-firefox & {
+        .name {
+            vertical-align: middle;
+        }
+    }
+
+    html.linux.browser-chrome & {
+        .name {
+            vertical-align: text-top;
+            top: 3px;
+        }
+    }
+
+    ._Button {
+        margin-right:8px;
+    }
+
+    .ButtonTrash {
+        position: absolute;
+        right:10px;
+        margin-right:0px;
+    }
+
+    &:hover {
+        background-color: rgb(176, 200, 228);
+    }
+}

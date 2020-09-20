@@ -1,0 +1,58 @@
+@keyframes _Button--stripe--processing {
+    0% { background-position: 0% 0; }
+    100% { background-position: 100% 0; }
+}
+
+button._Button {
+    &--stripe {
+        overflow: hidden;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            display: none;
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: bottom 0.3s;
+        }
+
+        &--processing {
+            &:before {
+                display: block;
+                bottom: 0;
+            }
+            &:after {
+                display: block;
+               -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                position: absolute;
+                bottom: 0;
+                background-size: 6px 6px;
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                animation: _Button--stripe--processing 5s infinite linear forwards;
+            }
+        }
+    }
+
+    &--theme-primary {
+        &._Button {
+            &--stripe {
+                &--processing {
+                    &:before {
+                        background-color:rgb(251, 251, 251);
+                    }
+                    &:after {
+                        background-image: repeating-linear-gradient(45deg, rgba(132, 96, 18, 0.61), rgba(132, 96, 18, 0.61) 1px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 5px);
+                        border-top-color: rgba(132, 96, 18, 0.61);
+                        border-bottom-color: rgba(123, 98, 44, 0.38);
+                    }
+                }
+            }
+        }
+    }
+}
